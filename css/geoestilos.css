@@ -1,3 +1,31 @@
-#map{
+body{
+    margin:0;
+    font-family: sans-serif;
+    background-image: url(../img/background.png);
+}
+
+#mapa{
     margin: 50px;
+    padding: 30px;
+    border-radius: 3px;
+}
+
+button{
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-decoration: none;
+    background-color: #4E94AB;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+}
+
+
+p{
+    background: #4E94AB;
+    color: blueviolet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 20%;
+    color: aliceblue;
+    border-radius: 50px;
 }

@@ -1,5 +1,5 @@
-function findMe(){
-    var output = document.getElementById('map');
+function FindMe(){
+    var output = document.getElementById('mapa');
 
     // Verificar si soporta geolocalizacion
     if (navigator.geolocation) {
