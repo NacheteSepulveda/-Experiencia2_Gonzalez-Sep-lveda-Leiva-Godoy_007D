@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Donaciones</title>
+	<title>Registro</title>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
 
@@ -18,81 +18,111 @@
 </head>
 
 <body>
-            <div class="container-fluid" style="margin-top: 50px;"> 
-                <div class="row justify-content-center">
-                <div class="col-md-6" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 30px;">
-                    <h1>Formulario de Registro</h1>
-                    <form id = "registration">
-                    <label>Nombres</label>
-                	<input type = "text" class = "form-control" name = "nombres" id="nombres" placeholder = "Ingrese sus Nombres"/>
-                    <br/>
-                    <label>Apellidos</label>
-                    <input type = "text" class = "form-control" name = "apellido" id="apellido" placeholder = "Ingrese sus Apellidos"/>
-                    <br/>
-                    <label>Rut</label>
-                    <input type = "text" class = "form-control" name = "rut" id="rut" placeholder = "Ingrese su Rut"/>
-                    <p id="resultado"></p>
-                    <br/>
-                    <label>Email</label>
-                    <input type = "text" class = "form-control" name = "email" id="email" placeholder = "Ingrese su Email"/>
-                    <br/>
-                    <label>Contraseña</label>
-                    <input type = "password" class = "form-control" name = "contraseña" placeholder = "Ingrese su Contraseña" id = "contraseña"/>
-                    <br/>
-                    <label>Confirmar Contraseña</label>
-                    <input type = "password" class = "form-control" name = "contraseña2" placeholder = "Ingrese nuevamente su Contraseña" id = "contraseña2"/>
-                    <br/>
-                    <label>Género</label>
-                        <div>
-							<label class="radio-inline"><input type="radio" name="genero"  id="hombre" class = "form-contorl"/>Hombre</label>
-							<br/>
-                            <label class="radio-inline"><input type="radio"  name="genero" id="mujer" class = "form-contorl"/>Mujer</label> 
-                            <br/>
-                            <label class="radio-inline"><input type="radio"  name="genero" id="otro" class = "form-contorl"/>Otro</label>         
-                            <br/>
-                            <label for="genero" class="error" style="display:none;"></label>
-                        </div>
-                    <br/>
-                    <label>Estado Civil</label>
-                        <div>
-                        	<input type="checkbox" class="radio" id="1" name = "estadocivil" onclick="getSelectItemThat(this.id)">Casado/a</label>
-							<input type="checkbox" class="radio" id="2" name = "estadocivil" onclick="getSelectItemThat(this.id)">Soltero/a</label>
-							<input type="checkbox" class="radio" id="3" name = "estadocivil" onclick="getSelectItemThat(this.id)">Viudo/a</label>
-                        	<input type="checkbox" class="radio" id="4" name = "estadocivil" onclick="getSelectItemThat(this.id)">Divorciado/a</label>
-                            <br/>
-                            <label for="estadocivil" class="error" style="display:none;"></label>
-                        </div>
-                    <br/>
-                    <label>Region</label>
-                        <select class = "form-control" name = "region" id="region">
-                        	<option value="0" selected="" disabled="">--Seleccione Región--</option>
-                            <option>Arica</option>
-                            <option>Tarapacá</option>
-                            <option>Antofagasta</option>
-                            <option>Atacama</option>
-                            <option>Coquimbo</option>
-                            <option>Valparaíso</option>
-                            <option>Metropolitana de Santiago</option>
-                            <option>Libertador General Bernardo O’Higgins</option>
-                            <option>Maule</option>
-                            <option>Ñuble</option>
-                            <option>Biobío</option>
-                            <option>La Araucanía</option>
-                            <option>Los Ríos</option>
-                            <option>Los Lagos</option>
-                            <option>Aysén del General Carlos Ibáñez del Campo</option>
-                            <option>Magallanes y la Antártica Chilena</option>
-                        </select>
-                    <br/>
-                    <label>Dirección</label>
-                    <textarea class = "form-control" name = "dirección" placeholder="Ingrese su Dirección" id="dirección"></textarea>
-                    <br/>
-                    <button id="btn-validar" type = "submit" class = "btn btn-primary" onclick="resultado()">Registrarse</button>
-                    </form>
+    <header>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><img src="../img/menu.png" alt=""></label>
+        <nav class="menu">
+            <ul>
+                <iMG src="../img/Pawpet.png" class="pawpet2">
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Quienes somos.html">Quienes somos</a></li>
+                <li><a href="GaleriadeFotos.html">Galeria de fotos</a></li>
+                <li><a href="Donar.html">Donar</a></li>
+                <li style="background-color: rgba(0,0,0,0.3);"><a>Registro</a></li>
+            </ul>
+            <div><iMG src="../img/Pawpet.png" class="pawpet"></div>
+        </nav>
+    </header>
+    <div class="container-fluid" style="margin-top: 50px;"> 
+        <div class="row justify-content-center">
+        <div class="col-sm-6" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 30px;">
+            <h1>Formulario de Registro</h1>
+            <form id = "registration">
+                <label>Nombres</label>
+                <input type = "text" class = "form-control" name = "nombres" id="nombres" placeholder = "Ingrese sus Nombres"/>
+                <br/>
+                <label>Apellidos</label>
+                <input type = "text" class = "form-control" name = "apellido" id="apellido" placeholder = "Ingrese sus Apellidos"/>
+                <br/>
+                <label>Rut</label>
+                <input type = "text" class = "form-control" name = "rut" id="rut" placeholder = "Ingrese su Rut"/>
+                <p id="resultado"></p>
+                <br/>
+                <label>Email</label>
+                <input type = "text" class = "form-control" name = "email" id="email" placeholder = "Ingrese su Email"/>
+                <br/>
+                <label>Contraseña</label>
+                <input type = "password" class = "form-control" name = "contraseña" placeholder = "Ingrese su Contraseña" id = "contraseña"/>
+                <br/>
+                <label>Confirmar Contraseña</label>
+                <input type = "password" class = "form-control" name = "contraseña2" placeholder = "Ingrese nuevamente su Contraseña" id = "contraseña2"/>
+                <br/>
+                <label>Género</label>
+                    <div>
+						<label class="radio-inline"><input type="radio" name="genero"  id="hombre" class = "form-contorl"/>Hombre</label>
+						<br/>
+                        <label class="radio-inline"><input type="radio"  name="genero" id="mujer" class = "form-contorl"/>Mujer</label> 
+                        <br/>
+                        <label class="radio-inline"><input type="radio"  name="genero" id="otro" class = "form-contorl"/>Otro</label>         
+                        <br/>
+                        <label for="genero" class="error" style="display:none;"></label>
                     </div>
+                <br/>
+                <label>Estado Civil</label>
+                    <div>
+                    	<input type="checkbox" class="radio" id="1" name = "estadocivil" onclick="getSelectItemThat(this.id)">Casado/a</label>
+						<input type="checkbox" class="radio" id="2" name = "estadocivil" onclick="getSelectItemThat(this.id)">Soltero/a</label>
+						<input type="checkbox" class="radio" id="3" name = "estadocivil" onclick="getSelectItemThat(this.id)">Viudo/a</label>
+                    	<input type="checkbox" class="radio" id="4" name = "estadocivil" onclick="getSelectItemThat(this.id)">Divorciado/a</label>
+                        <br/>
+                        <label for="estadocivil" class="error" style="display:none;"></label>
+                    </div>
+                <br/>
+                <label>Region</label>
+                    <select class = "form-control" name = "region" id="region">
+                    	<option value="0" selected="" disabled="">--Seleccione Región--</option>
+                        <option>Arica</option>
+                        <option>Tarapacá</option>
+                        <option>Antofagasta</option>
+                        <option>Atacama</option>
+                        <option>Coquimbo</option>
+                        <option>Valparaíso</option>
+                        <option>Metropolitana de Santiago</option>
+                        <option>Libertador General Bernardo O’Higgins</option>
+                        <option>Maule</option>
+                        <option>Ñuble</option>
+                        <option>Biobío</option>
+                        <option>La Araucanía</option>
+                        <option>Los Ríos</option>
+                        <option>Los Lagos</option>
+                        <option>Aysén del General Carlos Ibáñez del Campo</option>
+                        <option>Magallanes y la Antártica Chilena</option>
+                    </select>
+                <br/>
+                <label>Dirección</label>
+                <textarea class = "form-control" name = "dirección" placeholder="Ingrese su Dirección" id="dirección"></textarea>
+                <br/>
+                <button id="btn-validar" type = "submit" class = "btn btn-primary" onclick="resultado()">Registrarse</button>
+                <button type = "reset" class = "btn btn-primary" >Limpiar</button>
+                </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="container-fluid p-1 text-center" style="background-color: #4E94AB; margin-top: 10px;">
+    <div style="margin-top: 10px;"> 
+      <p>Angelo Gonzales, Alonso Leiva, Kevin Godoy, Ignacio Sepulveda ©Copyrigth Derechos reservados.</p>
+    </div>
+    <div>
+      
+      <a href="Insertar direccion de enlace"><img src="../img/Facebook.png" width="40px"></a>
+      <a href="Insertar direccion de enlace"><img src="../img/twitter.png" width="40px"></a>
+      <a href="Insertar direccion de enlace"><img src="../img/intagram.png" width="40px"></a>
+      
+    </div>
+
+  </div>  
 </body>
 </html>

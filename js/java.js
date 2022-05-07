@@ -1,3 +1,5 @@
+
+
 function MostrarMapa(){
     var b="Ocultar Mapa"
     var c="block"
@@ -10,6 +12,8 @@ function MostrarMapa(){
     document.getElementById("mapas").style.display=c;
 
 }
+
+function MapaApi(){
 
 var watchId;
 var mapa = null;
@@ -78,6 +82,7 @@ function mostrarPosicion(posicion) {
 	}
 }
 
+
 function mostrarErrores(error) {
 	switch (error.code) {
  		case error.PERMISSION_DENIED:
@@ -103,6 +108,10 @@ var opciones = {
 function detener() {
 	navigator.geolocation.clearWatch(watchId);
 }
+
+}
+
+
 
 function alerta(){ 
 	window.alert("¡Bienvenido a nuestra pagina llamada PawPet");
