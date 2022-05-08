@@ -3,7 +3,7 @@ function MostrarMapa(){
     var c="block"
     if(document.getElementById("boton1").value==b)
     {
-        b="¡ESTAMOS UBICADOS AQUI!"
+        b="Ubicacion de la tienda"
         c="none"
     }
     var i=document.getElementById("boton1").value=b;
