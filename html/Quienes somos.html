@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio</title>
   <link rel="stylesheet" href="../css/style2.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+  <link rel="stylesheet" href="../css/geoestilos.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO2wIp1Djj9W8cur7od8bHV9VzELD4tFA&callback=initMap" async defer></script>
   <script src="../js/java.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
@@ -64,27 +65,37 @@
                             Pero no te preocupes, si tú eres de las personas que les gusta tener otro tipo de mascotas que no es tan común que la mayoría de las personas tiene. Nuestra tienda también tiene productos para personas como tú y puedes observar todo nuestro stock en la pestaña de "Galería de fotos".
                           </p>
                       </div>
+                      
                       <div>
-                      <div class="container-fluid"> 
+                        <div style="text-align: center">
+                          <br>
+                          <h1>¿Donde nos encontramos?</h1>
+                          <input class="btn btn-primary" type="button" value="Ubicacion de la tienda" id="boton1" onclick="MostrarMapa(),MapaApi()">
+                        </div>
+                        <div class="mapa" id="mapas">
+                          <article id="mapa"></article>
+                        
+                        </div>
+                        <br>
+                      <div> 
                         <div class="row justify-content-center">
-                             <div class="img" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 5px; margin-top: 10px;"><img src="../img/perrito.jpg"></div>
-                             <div class="img" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 5px; margin-top: 10px; margin-left: 10px;"><img src="../img/perrito2.jpg"></div>
+                             <div class="img" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 5px; margin-top: 10px;"><img src="../img/perrito.jpg" style="display:block ; max-width:100% ;width: 100%;"></div>
+                             <div class="img" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 5px; margin-top: 10px; margin-left: 10px;"><img src="../img/perrito2.jpg" style="display:block ; max-width:100% ;width: 100%;"></div>
                           <div class="col-sm-8" style=" font-size: 20px; text-align: justify; padding: 10px;">
                     </div>
-
+                    <br>
+                    <br>
                   </div>
-                    <div class="container-fluid">
-                        <div class="row justify-content-center">
-                            <div class="img2" style="float: center;">
-                                <iframe width="840" height="472.5" src="https://www.youtube.com/embed/P-FCZWuUDDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                          <iframe  src="https://www.youtube.com/embed/P-FCZWuUDDI" frameborder="0"  class="embed-responsive-item"></iframe>
                     </div>
             </div>
         </div>
     </div>
 </div>
 </div>
+
+
 <div class="container-fluid p-1 text-center" style="background-color: #4E94AB; margin-top: 10px;">
   <div style="margin-top: 10px;"> 
     <p>Angelo Gonzales, Alonso Leiva, Kevin Godoy, Ignacio Sepulveda ©Copyrigth Derechos reservados.</p>
@@ -97,6 +108,9 @@
     
   </div>
 
+  
+
 </div>  
 </body>
 </html>
+
