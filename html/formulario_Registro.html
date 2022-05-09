@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Donaciones</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.js%22%3E"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js%22%3E"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style2.css">
+        <script src="../js/validacion.js"></script>
+    
+    
+    </head>
+<body>
+    <header>
+        <div><iMG src="../img/Pawpet.png" class="pawpet"></div>
+      <input type="checkbox" id="btn-menu">
+      <label for="btn-menu"><img src="../img/menu.png" alt=""></label>
+      <nav class="menu">
+          <ul>
+              <li style="background-color: rgba(0,0,0,0.3);"><a>Inicio</a></li>
+              <li><a href="Quienes somos.html">Quienes somos</a></li>
+              <li><a href="GaleriadeFotos.html">Galeria de fotos</a></li>
+          </ul>
+      </nav>
+  </header>
+
+
+	<div class="container-fluid" style="margin-top: 50px; ;">
+        <div class="row justify-content-center">
+    	    <div class = "col-md-6" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 30px;">
+            	<div>
+                	<h1>Formulario de Registro<h1></h1>
+                </div>
+                <div>
+                	<form id = "registration">
+                    	<label>Nombres</label>
+                        <input type = "text" class = "form-control" name = "nombres" id="nombres" placeholder = "Nombres"/>
+                        </br>
+                        <label>Apellidos</label>
+                        <input type = "text" class = "form-control" name = "apellidos" id="apellidos" placeholder = "Apellidos"/>
+                        <br/>
+                        <label>Rut</label>
+                        <input type = "text" class = "form-control" name = "rut" id="rut" placeholder = "Rut"/>
+                        <br/>
+                        <label>Email</label>
+                        <input type = "text" class = "form-control" name = "Email" id="Email" placeholder = "Email"/>
+                        <br/>
+                        <label>Contraseña</label>
+                        <input type = "password" class = "form-control" name = "contraseña" id="contraseña" placeholder = "Contraseña" id = "password"/>
+                        <br/>
+                        <label>Confirmar Contraseña</label>
+                        <input type = "password" class = "form-control" name = "confirm" placeholder = "Confirmar Contraseña"/>
+                        <br/>
+                        <label>Género</label>
+                        <div class = "gender">
+							<label class="radio-inline"><input type="radio" name="gender" class = "form-contorl"/>Hombre</label>
+							<label class="radio-inline"><input type="radio" name="gender" class = "form-contorl"/>Mujer</label> 
+                            <label class="radio-inline"><input type="radio" name="gender" class = "form-contorl"/>Otro</label>         
+                        </div>
+                        <br/>
+                        <label>Estado Civil</label>
+                        <div>
+                        	<input type="checkbox" class="radio" id="1" name = "civil" onclick="getSelectItemThat(this.id)">Casado/a</label>
+							<input type="checkbox" class="radio" id="2" name = "civil" onclick="getSelectItemThat(this.id)">Soltero/a</label>
+							<input type="checkbox" class="radio" id="3" name = "civil" onclick="getSelectItemThat(this.id)">Viudo/a</label>
+                        	<input type="checkbox" class="radio" id="4" name = "civil" onclick="getSelectItemThat(this.id)">Divorciado/a</label>
+                        </div>
+                        <br/>
+                        <label>Region</label>
+                        <select class = "form-control" name = "region" id="region">
+                        	<option value="0" selected="" disabled="">--Seleccione Región--</option>
+                            <option>Arica</option>
+                            <option>Tarapacá</option>
+                            <option>Antofagasta</option>
+                            <option>Atacama</option>
+                            <option>Coquimbo</option>
+                            <option>Valparaíso</option>
+                            <option>Metropolitana de Santiago</option>
+                            <option>Libertador General Bernardo O’Higgins</option>
+                            <option>Maule</option>
+                            <option>Ñuble</option>
+                            <option>Biobío</option>
+                            <option>La Araucanía</option>
+                            <option>Los Ríos</option>
+                            <option>Los Lagos</option>
+                            <option>Aysén del General Carlos Ibáñez del Campo</option>
+                            <option>Magallanes y la Antártica Chilena</option>
+                        </select>
+                        <br/>
+                        <label>Dirección</label>
+                        <textarea class = "form-control" name = "dirección" placeholder="Dirección" id="Dirección"></textarea>
+                        <br/>
+                        <button type = "submit" class = "btn btn-primary">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

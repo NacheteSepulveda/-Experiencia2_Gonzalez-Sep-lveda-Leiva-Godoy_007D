@@ -6,30 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="../css/style2.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO2wIp1Djj9W8cur7od8bHV9VzELD4tFA&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
     <script src="../js/java.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   </head>
-<body>
+<body onload="alerta()">
     <header>
+          <div><iMG src="../img/Pawpet.png" class="pawpet"></div>
         <input type="checkbox" id="btn-menu">
         <label for="btn-menu"><img src="../img/menu.png" alt=""></label>
         <nav class="menu">
             <ul>
-                <iMG src="../img/Pawpet.png" class="pawpet2">
                 <li style="background-color: rgba(0,0,0,0.3);"><a>Inicio</a></li>
                 <li><a href="Quienes somos.html">Quienes somos</a></li>
                 <li><a href="GaleriadeFotos.html">Galeria de fotos</a></li>
-                <li><a href="Donar.html">Donar</a></li>
-                <li><a href="Registro.html">Registro</a></li>
             </ul>
-            <div><iMG src="../img/Pawpet.png" class="pawpet"></div>
         </nav>
     </header>
     <div class="container-fluid"> 
       <div class="row justify-content-center">
-        <div class="col-sm-10" style="font-size: 20px; padding: 10px;">
+        <div class="col-sm-8" style="font-size: 20px; padding: 10px;">
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="background-color: rgb(255, 255, 255) ; padding: 30px; box-shadow: 0px 0px 5px 1px black;">
             <div class="carousel-indicators">
               <button type="button" data-target="#carouselExampleCaptions" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -92,7 +89,7 @@
     </div>
     <div class="container-fluid p-1 text-center" style="background-color: #4E94AB; margin-top: 10px;">
       <div style="margin-top: 10px;"> 
-        <p>Angelo Gonzales, Alonso Leiva, Kevin Godoy, Ignacio Sepulveda ©Copyrigth Derechos reservados.</p>
+        <p>Angelo Gonzales, Alonso Leiva, Kevin Godoy, ©Copyrigth Derechos reservados.</p>
       </div>
       <div>
         
@@ -101,9 +98,10 @@
         <a href="Insertar direccion de enlace"><img src="../img/intagram.png" width="40px"></a>
         
       </div>
-  
+
     </div>  
-    <input type="button" value="Mostrar Mapa" id="boton1" onclick="MostrarMapa(),MapaApi()">
+
+    <input type="button" value="Mostrar Mapa" id="boton1" onclick="MostrarMapa()">
     <div class="mapa" id="mapas">
       <article id="mapa"></article>
     </div>

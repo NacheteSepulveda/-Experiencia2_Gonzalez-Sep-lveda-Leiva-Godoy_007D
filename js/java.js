@@ -1,17 +1,15 @@
 function MostrarMapa(){
-    var b="Ocultar Ubicacion"
+    var b="Ocultar Mapa"
     var c="block"
     if(document.getElementById("boton1").value==b)
     {
-        b="Ubicacion de la tienda"
+        b="Mostrar Mapa"
         c="none"
     }
     var i=document.getElementById("boton1").value=b;
     document.getElementById("mapas").style.display=c;
 
 }
-
-function MapaApi(){
 
 var watchId;
 var mapa = null;
@@ -24,44 +22,11 @@ if (navigator.geolocation) {
 }
 
 function mostrarPosicion(posicion) {
-	var latitud = posicion.coords.latitude;
-	var longitud = posicion.coords.longitude;
+	var latitud = -33.511305;
+	var longitud = -70.752576;
+
+
 	var miPosicion = new google.maps.LatLng(latitud, longitud);
-
-	var latitud2 = -33.511219;
-	var longitud2 = -70.752550;
-
-
-
-	var gdestino = new google.maps.LatLng(latitud2, longitud2);
-
-	var objConfigDR={
-		map:mapa
-	}
-	var objConfigDS={
-		origin:miPosicion,
-		destination:gdestino,
-		travelMode:google.maps.TravelMode.DRIVING
-	}
-
-	var ds= new google.maps.DirectionsService();
-	//obtener coordenadas
-	var dr= new google.maps.DirectionsRenderer(objConfigDR);
-	//traduce coordenadas a la ruta visible
-
-	ds.route(objConfigDS, fnRutear);
-
-	function fnRutear(resultados, status){
-		//mostrar la linea entre A y B
-		if(status=='OK'){
-			dr.setDirections(resultados);
-		}
-		else{
-			alert('Error'+status);
-		}
-	}
-
-
 
 	// Se comprueba si el mapa se ha cargado ya 
 	if (mapa == null) {
@@ -79,7 +44,6 @@ function mostrarPosicion(posicion) {
 		mapaMarcador.setPosition(miPosicion);
 	}
 }
-
 
 function mostrarErrores(error) {
 	switch (error.code) {
@@ -106,10 +70,6 @@ var opciones = {
 function detener() {
 	navigator.geolocation.clearWatch(watchId);
 }
-
-}
-
-
 
 function alerta(){ 
 	window.alert("¡Bienvenido a nuestra pagina llamada PawPet");
